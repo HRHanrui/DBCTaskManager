@@ -1,0 +1,25 @@
+#pragma once
+
+
+// CWaveList
+
+class CWaveList : public CListCtrl
+{
+	DECLARE_DYNAMIC(CWaveList)
+
+public:
+	CWaveList();
+	virtual ~CWaveList();
+
+protected:
+	DECLARE_MESSAGE_MAP()
+public:
+	virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
+	afx_msg void OnPaint();
+	afx_msg void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct); 
+	int nCol;
+	int nLine;
+	void _DrawWave(Gdiplus::Graphics  * pGraph,  Gdiplus::PointF * pArray,CRect rc);
+};
+
+

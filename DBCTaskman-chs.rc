@@ -1,0 +1,907 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\DBCTaskman.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DBCTaskman.ico"
+IDI_SERVICE             ICON                    "res\\service.ico"
+IDI_SVCHOST             ICON                    "res\\SVCHOST.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PAGE_DETAILS DIALOGEX 0, 0, 258, 104
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DETAILSLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,244,62
+    PUSHBUTTON      "结束进程",IDC_BTN_ENDPROCESS,190,82,61,14
+END
+
+IDD_PAGE_PERFORMANCE DIALOGEX 0, 0, 414, 278
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "打开资源监视器",IDC_BTN_OPENRESMON,97,254,86,17
+END
+
+IDD_PAGE_SERVICES DIALOGEX 0, 0, 385, 200
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SERVICESLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,371,62
+    PUSHBUTTON      "打开服务",IDC_BTN_OPENSERVICES,41,173,96,19
+END
+
+IDD_PAGE_USERS DIALOGEX 0, 0, 385, 200
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_USERLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,371,62
+    PUSHBUTTON      "断开连接",IDC_BTN_DISCONNECT,287,174,68,18
+END
+
+IDD_PAGE_PERFORMANCE_BOX DIALOGEX 0, 0, 414, 278
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    LTEXT           "Item",IDC_ITEMLABEL,14,11,76,17
+    LTEXT           "60 秒内的利用率 %",IDC_TIP1,13,35,101,9
+    RTEXT           "100%",IDC_TIP2,217,35,25,9
+    RTEXT           "Item Name",IDC_ITEMNAME,71,18,186,11,SS_ENDELLIPSIS,WS_EX_RIGHT
+    CONTROL         "",IDC_LIST_PERFORMANCEITEM,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_TABSTOP,3,122,125,149
+    LTEXT           "60秒",IDC_TIP3,16,57,101,9
+    RTEXT           "0",IDC_TIP4,176,57,76,9
+    LTEXT           "-",IDC_TIP5,16,78,62,9
+    RTEXT           "100%",IDC_TIP6,193,78,76,9
+    LTEXT           "60秒",IDC_TIP7,14,105,76,9
+    RTEXT           "0",IDC_TIP8,207,105,76,9
+END
+
+IDD_PAGE_PROCESSES DIALOGEX 0, 0, 258, 104
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROCESSLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,6,7,245,62
+    PUSHBUTTON      "结束任务",IDC_BTN_ENDTASK,190,82,61,14,WS_DISABLED
+END
+
+IDD_SEL_COLUMNS DIALOGEX 0, 0, 248, 224
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择列"
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,134,203,50,14
+    PUSHBUTTON      "取消",IDCANCEL,191,203,50,14
+    LTEXT           "选择将显示在表中的列.",IDC_STATIC,7,7,169,19,SS_CENTERIMAGE
+    CONTROL         "",IDC_SELCOLUMN_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,29,234,165
+END
+
+IDD_PAGE_STARTUP DIALOGEX 0, 0, 381, 217
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STARTUP,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,367,128
+END
+
+IDD_AFFINITY DIALOGEX 0, 0, 222, 198
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Processor Affinity"
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,165,177,50,14
+    DEFPUSHBUTTON   "OK",IDOK,109,177,50,14,WS_DISABLED
+    CONTROL         "",IDC_AFFINITYCPULIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,28,208,142
+    LTEXT           "Which processors are allowed to run ""$""?",IDC_STATIC_TITLE,7,9,208,11,SS_ENDELLIPSIS
+END
+
+IDD_MINI_PERFERMANCEBOX DIALOGEX 0, 0, 163, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU | WS_THICKFRAME
+FONT 9, "Microsoft YaHei", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,23,164,14,12,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "确定",IDOK,9,160,12,16,NOT WS_VISIBLE
+    CONTROL         "",IDC_PROGRESS_CPU,"msctls_progress32",PBS_SMOOTH | WS_BORDER,9,24,144,6
+    LTEXT           "CPU",IDC_STATIC,9,10,46,9,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PROGRESS_MEMORY,"msctls_progress32",PBS_SMOOTH | WS_BORDER,9,56,144,6
+    CONTROL         "",IDC_PROGRESS_DISK,"msctls_progress32",PBS_SMOOTH | WS_BORDER,9,89,144,6
+    CONTROL         "",IDC_PROGRESS_NETWORK,"msctls_progress32",PBS_SMOOTH | WS_DISABLED | WS_BORDER,9,121,144,6
+    LTEXT           "内存  ",IDC_STATIC,9,42,46,11,0,WS_EX_TRANSPARENT
+    LTEXT           "磁盘",IDC_STATIC,9,75,46,11,0,WS_EX_TRANSPARENT
+    LTEXT           "网络",IDC_STATIC,9,108,46,11,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_CPU,107,10,46,9,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_MEM,107,42,46,9,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_DISK,107,75,46,9,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_NET,107,108,46,9,0,WS_EX_TRANSPARENT
+END
+
+IDD_HOTBOXVIEW DIALOGEX 0, 0, 174, 107
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "Microsoft YaHei", 0, 0, 0x0
+BEGIN
+END
+
+IDD_DBCTASKMAN_DIALOG DIALOGEX 0, 0, 431, 296
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Windows Task Manager"
+MENU IDR_MAINMENU
+FONT 9, "Microsoft YaHei", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,324,275,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,374,275,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_PAGETAB,"SysTabControl32",WS_TABSTOP,7,7,417,25
+    CONTROL         "    ",IDC_BTN_FEWERORMORE,"Button",BS_OWNERDRAW | WS_TABSTOP,7,272,73,17
+    CONTROL         "",IDC_SIMPLETASK,"SysListView32",LVS_REPORT | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,52,417,169
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 261, 214
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 DBC Task Manager"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,6,24,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE
+    DEFPUSHBUTTON   "确定",IDOK,212,194,43,13,WS_GROUP
+    CTEXT           "Ver",IDC_STATIC_A,6,58,249,12,0,WS_EX_TRANSPARENT
+    CONTROL         "<a>DBC Task Manager 主页</a>",IDC_SYSLINK1,"SysLink",WS_TABSTOP,94,154,76,13
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,0,61,260,1
+    CTEXT           "Static",IDC_DBCVER,6,125,249,13
+    CONTROL         "<a>问题及建议</a>",IDC_SYSLINK2,"SysLink",WS_TABSTOP,89,169,39,13
+    CONTROL         "<a>捐赠(BTC/IFC)</a>",IDC_SYSLINK3,"SysLink",WS_TABSTOP,133,169,57,13
+END
+
+IDD_PROCESS_PROPERTIES_PERFORMANCE DIALOGEX 0, 0, 337, 259
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "性能"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "CPU",IDC_STATIC,7,7,155,76
+    LTEXT           "Priority",IDC_STATIC,15,21,39,8
+    LTEXT           "Kernel Time",IDC_STATIC,15,32,42,8
+    LTEXT           "User Time",IDC_STATIC,15,43,39,8
+    LTEXT           "Total Time",IDC_STATIC,15,54,39,8
+    LTEXT           "Cycles",IDC_STATIC,15,65,39,8
+    RTEXT           "-",IDC_PRIORITY,94,21,62,8
+    RTEXT           "-",IDC_KERNELTIME,94,32,62,8
+    RTEXT           "-",IDC_USERTIME,94,43,62,8
+    RTEXT           "-",IDC_TOTALTIME,94,54,62,8
+    RTEXT           "-",IDC_SYCLES,94,65,62,8
+    LTEXT           "Private Bytes",IDC_STATIC,15,101,44,8
+    LTEXT           "Peak Private Bytes",IDC_STATIC,15,112,65,8
+    LTEXT           "Virtual Size",IDC_STATIC,15,124,39,8
+    LTEXT           "Page Faults",IDC_STATIC,15,135,39,8
+    LTEXT           "Page Fault Delta",IDC_STATIC,15,146,62,8
+    GROUPBOX        "物理内存",IDC_STATIC,7,87,155,76
+    LTEXT           "Memory Priority",IDC_STATIC,15,180,57,8
+    LTEXT           "Working Set",IDC_STATIC,15,191,65,8
+    LTEXT           "WS Private",IDC_STATIC,29,202,39,8
+    LTEXT           "WS Shareable",IDC_STATIC,29,213,59,8
+    LTEXT           "WS Shared",IDC_STATIC,29,224,62,8
+    GROUPBOX        "虚拟内存",IDC_STATIC,7,167,155,85
+    LTEXT           "Peak Working Set",IDC_STATIC,15,235,62,8
+    RTEXT           "-",IDC_PRIVATE_BYTES,94,101,62,8
+    RTEXT           "-",IDC_PEAKPRIVATE_BYTES2,98,112,58,8
+    RTEXT           "-",IDC_VIRTUALSIZE,98,124,58,8
+    RTEXT           "-",IDC_PF,98,135,58,8
+    RTEXT           "-",IDC_WS,94,191,62,8
+    RTEXT           "-",IDC_PEAKWS,94,235,62,8
+    RTEXT           "-",IDC_WS_PRIVATE,94,202,62,8
+    RTEXT           "-",IDC_WS_SHAREABLE,94,213,62,8
+    GROUPBOX        "I/O",IDC_STATIC,173,7,157,130
+    LTEXT           "I/O Priority",IDC_STATIC,184,21,36,8
+    LTEXT           "Reads",IDC_STATIC,184,32,65,8
+    LTEXT           "Read Delta",IDC_STATIC,184,43,39,8
+    LTEXT           "Read Byte Delta",IDC_STATIC,184,54,53,8
+    LTEXT           "Writes",IDC_STATIC,184,65,34,8
+    LTEXT           "Write Delta",IDC_STATIC,184,76,40,8
+    LTEXT           "Write Bytes Delta",IDC_STATIC,184,87,60,9
+    LTEXT           "Other",IDC_STATIC,184,98,24,9
+    LTEXT           "Other Delta",IDC_STATIC,184,109,38,9
+    LTEXT           "Other Bytes Delta",IDC_STATIC,184,120,61,9
+    RTEXT           "-",IDC_READS,260,32,62,8
+    RTEXT           "-",IDC_WRITES,260,65,62,8
+    RTEXT           "-",IDC_OTHER,260,98,62,8
+END
+
+IDD_PROCESS_PROPERTIES_MODULES DIALOGEX 0, 0, 329, 241
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "模块"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_MOUDLE,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_GROUP | WS_TABSTOP,6,7,316,146
+END
+
+IDD_PROCESS_PROPERTIES_IMAGE DIALOGEX 0, 0, 355, 272
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "镜像"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PATH,7,95,341,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_CMDLINE,7,126,341,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_DESCRIPTION,56,13,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_PUBLISHER,56,30,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+    ICON            "",IDC_STATIC_ICON,7,13,21,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    EDITTEXT        IDC_EDIT_VER,56,50,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+    LTEXT           "版本:",IDC_STATIC,7,50,32,9
+    LTEXT           "路径:",IDC_STATIC,7,83,32,8
+    LTEXT           "命令行:",IDC_STATIC,7,114,80,8
+    LTEXT           "父进程:",IDC_STATIC,7,174,32,8
+    EDITTEXT        IDC_EDIT_PARENT,56,174,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+    LTEXT           "用户:",IDC_STATIC,7,191,32,8
+    EDITTEXT        IDC_EDIT_USER,56,191,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_TRANSPARENT
+END
+
+IDD_PROCESS_PROPERTIES_HANDLES DIALOGEX 0, 0, 340, 269
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "句柄"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_HANDLES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,325,255
+    DEFPUSHBUTTON   "OK",IDOK,306,254,26,8,NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "运行新任务(&N)",                   ID_FILE_RUNNEWTASK
+        MENUITEM SEPARATOR
+        MENUITEM "保存...",                       ID_FILE_SAVELIST
+        MENUITEM "保存截图...",                     ID_FILE_SAVESCREENSHOT
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_FILE_EXIT
+    END
+    POPUP "选项(&O)"
+    BEGIN
+        MENUITEM "置于顶层(&A)",                    ID_OPTIONS_ALWAYSONTOP
+        MENUITEM "使用时最小化(&M)",                  ID_OPTIONS_MINIMIZEONUSE
+        MENUITEM "最小化时隐藏(&H)",                  ID_OPTIONS_HIDEWHENMINIMIZED
+        MENUITEM SEPARATOR
+        MENUITEM "设置...",                       ID_OPTIONS_SETTINGS
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "立即刷新(&R)     \tF5",           ID_VIEW_REFRESHNOW
+        POPUP "刷新速度(&U)"
+        BEGIN
+            MENUITEM "高(&H)",                       ID_UPDATESPEED_HIGH
+            MENUITEM "标准(&N)",                      ID_UPDATESPEED_NORMAL
+            MENUITEM "低(&L)",                       ID_UPDATESPEED_LOW
+            MENUITEM "暂停(&P)",                      ID_UPDATESPEED_PAUSED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "按类型分组(&G)",                   ID_VIEW_GROUPBYTYPE
+        MENUITEM "全部展开(&E)",                    ID_VIEW_EXPANDALL
+        MENUITEM "全部收起",                        ID_VIEW_COLLAPSEALL
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "Task Manager 帮助主题        \tF1", ID_HELP_TASKMANAGERHELPTOPIC
+        MENUITEM SEPARATOR
+        MENUITEM "关于 DBC Task Manager",         ID_HELP_ABOUTTASKMANAGER
+    END
+END
+
+IDR_POPMENU_BASE MENU 
+BEGIN
+    POPUP "ProcessesList"
+    BEGIN
+        MENUITEM "展开",                          ID_PROCESSESLIST_EXPAND
+        MENUITEM "结束任务",                        ID_PROCESSESLIST_ENDTASK
+        POPUP "资源值"
+        BEGIN
+            POPUP "内存"
+            BEGIN
+                MENUITEM "百分比",                         ID_MEMORY_PERCENTS_PLIST
+                MENUITEM "值",                           ID_MEMORY_VALUES_PLIST
+            END
+            POPUP "磁盘"
+            BEGIN
+                MENUITEM "百分比",                         ID_DISK_PERCENTS32877
+                MENUITEM "值",                           ID_DISK_VALUES32878
+            END
+            POPUP "网络"
+            BEGIN
+                MENUITEM "百分比",                         ID_NETWORK_PERCENTS32879
+                MENUITEM "值",                           ID_NETWORK_VALUSE
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "转到详细信息(&G)",                  ID_PROCESSESLIST_GOTODETAILS
+        MENUITEM "打开文件位置(&O)",                  ID_PROCESSESLIST_OPENFILELOCATION
+        MENUITEM "联机搜索(&S)",                    ID_PROCESSESLIST_SEARCHONLINE
+        MENUITEM "属性(&I)",                      ID_PROCESSESLIST_PROPERTIES
+    END
+    POPUP "Performance"
+    BEGIN
+        POPUP "将图形更改为(&G)"
+        BEGIN
+            MENUITEM "总体利用率(&O)",                   ID_CHANGEGRAPHTO_OVERALLUTILIZATION
+            MENUITEM "逻辑处理器(&L)",                   ID_CHANGEGRAPHTO_LOGICALPROCESSORS
+            MENUITEM "NUMA 节点(&N)",                 ID_CHANGEGRAPHTO_NUMANODES
+        END
+        MENUITEM "显示内核时间(&K)",                  ID_PERFORMANCE_SHOWKERNELTIMES
+        MENUITEM SEPARATOR
+        MENUITEM "图形摘要视图(&W)",                  ID_PERFORMANCE_GRAPHSUMMARYVIEW
+        POPUP "查看(&V)"
+        BEGIN
+            MENUITEM "CPU(&P)",                     ID_VIEW_CPU
+            MENUITEM "内存(&M)",                      ID_VIEW_MEMORY
+            POPUP "磁盘(D)"
+            BEGIN
+                MENUITEM "...",                         ID_DISK_NONE
+            END
+        END
+        MENUITEM "查看网络详细信息(&D)",                ID_PERFORMANCE_VIEWNETWORKDETAILS
+        MENUITEM SEPARATOR
+        MENUITEM "复制(&C)                              \tCtrl_C", ID_PERFORMANCE_COPY
+    END
+    POPUP "UsersList"
+    BEGIN
+        MENUITEM "展开(&P)",                      ID_USERSLIST_EXPAND
+        MENUITEM "断开连接(&D)",                    ID_USERSLIST_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "管理用户账户(&M)",                  ID_USERSLIST_MANAGEUSERACCOUNTS
+    END
+    POPUP "DetailsList"
+    BEGIN
+        MENUITEM "结束进程(&E)",                    ID_POP_DETAILSLIST_ENDPROCESS
+        MENUITEM "结束进程树(&T)",                   ID_POP_DETAILSLIST_ENDPROCESSTREE
+        MENUITEM SEPARATOR
+        POPUP "设置优先级(&P)"
+        BEGIN
+            MENUITEM "实时(&R)",                      ID_SETPRIORITY_REALTIME
+            MENUITEM "高(&H)",                       ID_SETPRIORITY_HIGH
+            MENUITEM "高于正常(&A)",                    ID_SETPRIORITY_ABOVENORMAL
+            MENUITEM "正常(&N)",                      ID_SETPRIORITY_NORMAL
+            MENUITEM "低于正常(&B)",                    ID_SETPRIORITY_BELOWNORMAL
+            MENUITEM "低(&L)",                       ID_SETPRIORITY_LOW
+        END
+        MENUITEM "设置相关性(&F)...",                ID_DETAILSLIST_SETAFFINITY
+        MENUITEM SEPARATOR
+        POPUP "创建转储文件(&C)"
+        BEGIN
+            MENUITEM "简易 ...",                      ID_CREATEDUMPFILE_CREATEMINIDUMP
+            MENUITEM "完整 ...",                      ID_CREATEDUMPFILE_CREATEFULLDUMP
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "打开文件位置(&O)",                  ID_POP_DETAILSLIST_OPENFILELOCATION
+        MENUITEM "联机搜索(&N)",                    ID_DETAILSLIST_SEARCHONLINE
+        MENUITEM "属性(&R)",                      ID_DETAILSLIST_PROPERTIES
+        MENUITEM "转到服务(&S)",                    ID_DETAILSLIST_GOTOSERVICE
+    END
+    POPUP "ServicesList"
+    BEGIN
+        MENUITEM "启动(&S)",                      ID_SERVICESLIST_START
+        MENUITEM "停止(&T)",                      ID_SERVICESLIST_STOP
+        MENUITEM "重新启动(&R)",                    ID_SERVICESLIST_RESTART
+        MENUITEM SEPARATOR
+        MENUITEM "打开服务(&V)",                    ID_SERVICESLIST_OPENSERVICES
+        MENUITEM "联机搜索(&O)",                    ID_SERVICESLIST_SEARCHONLINE
+        MENUITEM "转到详细信息(&D)",                  ID_SERVICESLIST_GOTODETAILS
+    END
+    POPUP "PerformanceType"
+    BEGIN
+        MENUITEM "摘要视图",                        ID_PERFORMANCETYPE_SUMMARYVIEW
+        MENUITEM "隐藏图表",                        ID_PERFORMANCETYPE_HIDEGRAPHS
+        MENUITEM SEPARATOR
+        MENUITEM "复制                       \tCtrl+C", ID_PERFORMANCETYPE_COPY
+    END
+    POPUP "ProcListTaskItem"
+    BEGIN
+        MENUITEM "切换到",                         ID_PROCLISTTASKITEM_SWITCHTO
+        MENUITEM "前置(&B)",                      ID_PROCLISTTASKITEM_BRINGTOFRONT
+        MENUITEM "最小化(&M)",                     ID_PROCLISTTASKITEM_MINIMIZE
+        MENUITEM "最大化(&X)",                     ID_PROCLISTTASKITEM_MAXIMIZE
+        MENUITEM "结束任务(&E)",                    ID_PROCLISTTASKITEM_ENDTASK
+    END
+    POPUP "SimpleList"
+    BEGIN
+        MENUITEM "切换到(&T)",                     ID_SIMPLELIST_SWITCHTO
+        MENUITEM "结束任务(&E)",                    ID_SIMPLELIST_ENDTASK
+        MENUITEM SEPARATOR
+        MENUITEM "运行新任务",                       ID_FILE_RUNNEWTASK
+        MENUITEM "置于顶层(&A)",                    ID_OPTIONS_ALWAYSONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "打开文件位置(&O)",                  ID_SIMPLELIST_OPENFILELOCATION
+        MENUITEM "联机搜索(&S)",                    ID_SIMPLELIST_SEARCHONLINE
+        MENUITEM "属性(&I)",                      ID_SIMPLELIST_PROPERTIES
+    END
+    POPUP "StartupList"
+    BEGIN
+        MENUITEM "禁止",                          ID_STARTUPLIST_DISABLE
+        MENUITEM SEPARATOR
+        MENUITEM "打开文件位置(&O)",                  ID_STARTUPLIST_OPENFILELOCATION
+        MENUITEM "跳转到入口(&J)",                   ID_STARTUPLIST_JUMPTOENTRY
+        MENUITEM "联机搜索(&S)",                    ID_STARTUPLIST_SEARCHONLINE
+        MENUITEM "属性(&I)",                      ID_STARTUPLIST_PROPERTIES
+    END
+END
+
+IDR_POPMENU_COLUMN MENU 
+BEGIN
+    POPUP "processes"
+    BEGIN
+        MENUITEM "类型",                          ID_PROCESSES_TYPE
+        MENUITEM "状态",                          ID_PROCESSES_STATUS
+        MENUITEM "发布者",                         ID_PROCESSES_PUBLISHER
+        MENUITEM "PID",                         ID_PROCESSES_PID
+        MENUITEM "进程名",                         ID_PROCESSES_PROCESSNAME
+        MENUITEM "命令行",                         ID_PROCESSES_COMMANDLINE
+        MENUITEM "CPU",                         ID_PROCESSES_CPU
+        MENUITEM "内存",                          ID_PROCESSES_MEMORY
+        MENUITEM "磁盘",                          ID_PROCESSES_DISK
+        MENUITEM "网络",                          ID_PROCESSES_NETWORK
+        MENUITEM SEPARATOR
+        POPUP "资源值"
+        BEGIN
+            POPUP "内存(&M)"
+            BEGIN
+                MENUITEM "百分比",                         ID_MEMORY_PERCENTS
+                MENUITEM "值",                           ID_MEMORY_VALUES
+            END
+            POPUP "磁盘(&K)"
+            BEGIN
+                MENUITEM "百分比",                         ID_DISK_PERCENTS
+                MENUITEM "值",                           ID_DISK_VALUES
+            END
+            POPUP "网络(&N)"
+            BEGIN
+                MENUITEM "百分比",                         ID_NETWORK_PERCENTS
+                MENUITEM "值",                           ID_NETWORK_VALUES
+            END
+        END
+    END
+    POPUP "Users"
+    BEGIN
+        MENUITEM "ID",                          ID_USERS_ID
+        MENUITEM "会话",                          ID_USERS_SESSION
+        MENUITEM "客户端名",                        ID_USERS_CLIENTNAME
+        MENUITEM "状态",                          ID_USERS_STATUS
+        MENUITEM "CPU",                         ID_USERS_CPU
+        MENUITEM "内存",                          ID_USERS_MEMORY
+        MENUITEM "磁盘",                          ID_USERS_DISK
+        MENUITEM "网络",                          ID_USERS_NETWORK
+        MENUITEM SEPARATOR
+        POPUP "资源值"
+        BEGIN
+            POPUP "内存"
+            BEGIN
+                MENUITEM "百分比",                         ID_USERS_MEMORY_PERCENTS
+                MENUITEM "值",                           ID_USERS_MEMORY_VALUES
+            END
+            POPUP "磁盘"
+            BEGIN
+                MENUITEM "百分比",                         ID_USERS_DISK_PERCENTS
+                MENUITEM "值",                           ID_USERS_DISK_VALUES
+            END
+            POPUP "网络"
+            BEGIN
+                MENUITEM "百分比",                         ID_USERS_NETWORK_PERCENTS
+                MENUITEM "值",                           ID_USERS_NETWORK_VALUES
+            END
+        END
+    END
+    POPUP "details"
+    BEGIN
+        MENUITEM "Hide column",                 ID_DETAILS_HIDECOLUMN
+        MENUITEM "Select columns",              ID_DETAILS_SELECTCOLUMNS
+    END
+END
+
+IDR_MENU_SHELL MENU 
+BEGIN
+    POPUP "Notify"
+    BEGIN
+        MENUITEM "还原(&R)",                      ID_NOTIFY_RESTORE
+        MENUITEM "置于顶层(&A)",                    ID_OPTIONS_ALWAYSONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                          ID_FILE_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DBCTASKMAN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 424
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 289
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_PROCESS_PROPERTIES_PERFORMANCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        VERTGUIDE, 156
+        VERTGUIDE, 162
+        VERTGUIDE, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+    END
+
+    IDD_PROCESS_PROPERTIES_MODULES, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_PROCESS_PROPERTIES_IMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        VERTGUIDE, 56
+        TOPMARGIN, 13
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_PROCESS_PROPERTIES_HANDLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 332
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 262
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_PNG_ABOUT           PNG                     "res\\logotext.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,3,65474
+ PRODUCTVERSION 1,0,3,65474
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "DBC Studio"
+            VALUE "FileDescription", "DBC Task Manager"
+            VALUE "FileVersion", "1.0.3.65474"
+            VALUE "InternalName", "DBCTaskman.exe"
+            VALUE "LegalCopyright", " (c) DBC Studio.  All rights reserved."
+            VALUE "OriginalFilename", "DBCTaskman.exe"
+            VALUE "ProductName", "DBC Task Manager"
+            VALUE "ProductVersion", "0.9.2.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING_COLUMN_000   "名称"
+    IDS_STRING102           "类型"
+    IDS_STRING103           "PID"
+    IDS_STRING155           "状态"
+    IDS_STRING104           "用户名"
+    IDS_STRING105           "会话 ID"
+    IDS_STRING106           "CPU"
+    IDS_STRING107           "CPU 时间"
+    IDS_STRING108           "内存-工作集"
+    IDS_STRING109           "内存-工作集峰值"
+    IDS_STRING110           "内存-工作集增量)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING111           "内存-专用工作集"
+    IDS_STRING112           "内存-提交大小"
+    IDS_STRING113           "内存-页面缓冲池"
+    IDS_STRING114           "内存-非页面缓冲池"
+    IDS_STRING115           "页面错误"
+    IDS_STRING116           "页面错误增量"
+    IDS_STRING117           "基本优先级"
+    IDS_STRING118           "句柄数"
+    IDS_STRING119           "线程数"
+    IDS_STRING120           "用户对象"
+    IDS_STRING121           "GDI 对象"
+    IDS_STRING122           "I/O 读取"
+    IDS_STRING123           "I/O 写入"
+    IDS_STRING124           "I/O 其他"
+    IDS_STRING125           "I/O 读取字节"
+    IDS_STRING126           "I/O 写入字节"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING127           "I/O 其他字节"
+    IDS_STRING128           "映像完整路径"
+    IDS_STRING129           "命令行"
+    IDS_STRING130           "用户帐户控制（UAC）虚拟化"
+    IDS_STRING132           "描述"
+    IDS_STRING_COLUMN_END   "数据执行保护"
+    IDS_ABOUTBOX            "关于 DBC Task manager"
+    IDS_STRING_COL_PS0      "名称"
+    IDS_STRING135           "类型"
+    IDS_STRING136           "状态"
+    IDS_STRING137           "发布者"
+    IDS_STRING138           "PID"
+    IDS_STRING139           "进程名"
+    IDS_STRING140           "命令行"
+    IDS_STRING141           "CPU"
+    IDS_STRING142           "内存"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING143           "磁盘"
+    IDS_STRING_COL_PSEND    "网络"
+    IDS_STRING_COL_US0      "用户"
+    IDS_STRING146           "ID"
+    IDS_STRING147           "会话"
+    IDS_STRING149           "客户端名"
+    IDS_STRING150           "状态"
+    IDS_STRING151           "CPU"
+    IDS_STRING152           "内存"
+    IDS_STRING153           "磁盘"
+    IDS_STRING_COL_USEND    "网络"
+    IDS_STRING_WAVETIME_SLOW "4分钟"
+    IDS_STRING_WAVETIME_NORMAL "60秒"
+    IDS_STRING_WAVETIME_FAST "30秒"
+    IDS_STRING_FEWERDETAILS "简略信息(D)"
+    IDS_STRING_MOREDETAILS  "详细信息"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING_POPMENU_EXP  "展开"
+    IDS_STRING_POPMENU_COLL "收起"
+    IDS_STRING_ENDPROCTIP   "如果某个打开的程序与此进程关联，则会关闭此程序并且将丢失所有未保存的数据。如果结束某个系统进程，则可能导致系统不稳定。你确定要继续吗?"
+    IDS_STRING_ENDPROCTITLETIP "你希望结束 '%s' 吗?"
+    IDS_STRING_ENDPROCBTN   "结束进程"
+    IDS_STRING_SHOWGRAPH    "显示图表"
+    IDS_STRING_HIDEGRAPH    "隐藏图表"
+    IDS_STRING_COL_STARTUP0 "名称"
+    IDS_STRING168           "状态"
+    IDS_STRING169           "发布者"
+    IDS_STRING170           "启动类型"
+    IDS_STRING171           "命令行"
+    IDS_STRING_ENDPROCTREETIP 
+                            "如果多个打开的程序或进程与此进程树关联，则会关闭这些程序或进程并且将丢失所有未保存的数据。如果结束某个系统进程，则可能导致系统不稳定。你确定要继续吗?"
+    IDS_STRING_ENDPROCTREEBTN "结束进程树"
+    IDS_STRING_ENDPROCTREETITLETIP "你希望结束 '%s' 的进程树吗?"
+    IDS_FONTNAME            "Microsoft YaHei"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PITEM_CPU           "CPU"
+    IDS_PITEM_MEM           "内存"
+    IDS_PITEM_DISK          "磁盘"
+    IDS_PITEM_NET           "以太网"
+    IDS_PITEM_WIRELESS      "无线网络"
+    IDS_PITEM_GPU           "GPU"
+    IDS_TABITEM_PROCESSES   "进程"
+    IDS_TABITEM_PERFORMANCE "性能"
+    IDS_TABITEM_USERS       "用户"
+    IDS_TABITEM_DETAILS     "详细信息"
+    IDS_TABITEM_SERV        "服务"
+    IDS_TABITEM_STARTUP     "启动"
+    IDS_COL_SERV0           "名称"
+    IDS_STRING190           "PID"
+    IDS_STRING191           "描述"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING192           "状态"
+    IDS_STRING193           "启动类型"
+    IDS_COL_SERV_END        "组"
+    IDS_STR_FONTNAME        "Tahoma"
+    IDS_MAIN_CAPTION        "任务管理器"
+    IDS_STR_GROUP_APP       "应用"
+    IDS_STR_GROUP_BKG       "后台进程"
+    IDS_STR_GROUP_WIN       "Windows进程"
+    IDS_STR_CPUINFO_0       "利用率"
+    IDS_STR_CPUINFO_1       "速度"
+    IDS_STR_CPUINFO_2       "进程"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_CPUINFO_3       "线程"
+    IDS_STR_CPUINFO_4       "句柄"
+    IDS_STR_CPUINFO_5       "正常运行时间"
+    IDS_STR_CPUINFO_6       "最大速度:\n插槽:\n内核:\n逻辑处理器:\n虚拟化:\n1级缓存:\n2级缓存:\n3级缓存:"
+    IDS_STR_TIP1_CPU_TOTAL  "% 利用率"
+    IDS_STR_TIP1_CPU_LOGICAL "内的利用率"
+    IDS_STR_TIP1_CPU_NUMA   "逻辑处理器"
+    IDS_STR_MEMINFO_0       "使用中"
+    IDS_STR_MEMINFO_1       "可用"
+    IDS_STR_MEMINFO_2       "已提交"
+    IDS_STR_MEMINFO_3       "已缓存"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_MEMINFO_4       "页面缓冲池"
+    IDS_STR_MEMINFO_5       "非页面缓冲池"
+    IDS_STR_MEMINFO_6       "速度:\n已使用的插槽::\n规格:\n为硬件保留的内存:"
+    IDS_STR_TIP3_MEMORY     "内存使用量"
+    IDS_STR_TIP5_MEMORY     "内存组合"
+    IDS_STR_DISKINFO_0      "活动时间"
+    IDS_STR_DISKINFO_1      "平均响应时间"
+    IDS_STR_DISKINFO_2      "读取速度"
+    IDS_STR_DISKINFO_3      "写入速度"
+    IDS_STR_DISKINFO_6      "容量:\n已格式化:\n系统磁盘:\n页面文件:"
+    IDS_STR_TIP5_DISK       "磁盘传输速率"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_NETWORKINFO_0   "发送"
+    IDS_STR_NETWORKINFO_2   "接收"
+    IDS_STR_NETWORKINFO_6   "适配器名称:\n连接类型:\nIPv4 地址:\nIPv6 地址:"
+    IDS_STR_TIP3_NETWORK    "吞吐量"
+    IDS_STR_PROPERTIESDLG_CAPTION "属性"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_SVR_STATUS      "已停止"
+    IDS_STRING261           "正在启动"
+    IDS_STRING262           "正在停止"
+    IDS_STRING263           "正在运行"
+    IDS_STRING265           "SERVICE_CONTINUE_PENDING"
+    IDS_STRING266           "SERVICE_PAUSE_PENDING"
+    IDS_STRING267           "暂停"
+    IDS_STRING268           "未知状态"
+    IDS_STR_SVR_STARTTYPE   "引导"
+    IDS_STRING270           "系统"
+    IDS_STRING271           "自动"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING272           "手动"
+    IDS_STRING273           "禁止"
+    IDS_STRING274           "未知"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\DBCTaskman.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

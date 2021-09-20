@@ -1,0 +1,931 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\DBCTaskman.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DBCTaskman.ico"
+IDI_SERVICE             ICON                    "res\\service.ico"
+IDI_SVCHOST             ICON                    "res\\SVCHOST.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+PNG_ABOUT               PNG                     "res\\logotext.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Run new task",                ID_FILE_RUNNEWTASK
+        MENUITEM SEPARATOR
+        MENUITEM "Save...",                     ID_FILE_SAVELIST
+        MENUITEM "Save Screenshot...",          ID_FILE_SAVESCREENSHOT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit Task Manager",           ID_FILE_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "Always on top",               ID_OPTIONS_ALWAYSONTOP
+        MENUITEM "Minimize On Use",             ID_OPTIONS_MINIMIZEONUSE
+        MENUITEM "Hide When Minimized",         ID_OPTIONS_HIDEWHENMINIMIZED
+        MENUITEM SEPARATOR
+        MENUITEM "Settings...",                 ID_OPTIONS_SETTINGS
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Refresh now     \tF5",        ID_VIEW_REFRESHNOW
+        POPUP "Update speed"
+        BEGIN
+            MENUITEM "High",                        ID_UPDATESPEED_HIGH
+            MENUITEM "Normal",                      ID_UPDATESPEED_NORMAL
+            MENUITEM "Low",                         ID_UPDATESPEED_LOW
+            MENUITEM "Paused",                      ID_UPDATESPEED_PAUSED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Group by type",               ID_VIEW_GROUPBYTYPE
+        MENUITEM "Expand all",                  ID_VIEW_EXPANDALL
+        MENUITEM "Collapse all",                ID_VIEW_COLLAPSEALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Task Manager help Topics        \tF1", ID_HELP_TASKMANAGERHELPTOPIC
+        MENUITEM SEPARATOR
+        MENUITEM "About Task Manager",          ID_HELP_ABOUTTASKMANAGER
+    END
+END
+
+IDR_POPMENU_BASE MENU 
+BEGIN
+    POPUP "ProcessesList"
+    BEGIN
+        MENUITEM "Expand",                      ID_PROCESSESLIST_EXPAND
+        MENUITEM "End Task",                    ID_PROCESSESLIST_ENDTASK
+        POPUP "Resource Values"
+        BEGIN
+            POPUP "Memory"
+            BEGIN
+                MENUITEM "Percents",                    ID_MEMORY_PERCENTS_PLIST
+                MENUITEM "Values",                      ID_MEMORY_VALUES_PLIST
+            END
+            POPUP "Disk"
+            BEGIN
+                MENUITEM "Percents",                    ID_DISK_PERCENTS32877
+                MENUITEM "Values",                      ID_DISK_VALUES32878
+            END
+            POPUP "Network"
+            BEGIN
+                MENUITEM "Percents",                    ID_NETWORK_PERCENTS32879
+                MENUITEM "Valuse",                      ID_NETWORK_VALUSE
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Go to Details",               ID_PROCESSESLIST_GOTODETAILS
+        MENUITEM "Open File Location",          ID_PROCESSESLIST_OPENFILELOCATION
+        MENUITEM "Search Online",               ID_PROCESSESLIST_SEARCHONLINE
+        MENUITEM "Properties",                  ID_PROCESSESLIST_PROPERTIES
+    END
+    POPUP "Performance"
+    BEGIN
+        POPUP "Change graph to"
+        BEGIN
+            MENUITEM "Overall utilization",         ID_CHANGEGRAPHTO_OVERALLUTILIZATION
+            MENUITEM "Logical processors",          ID_CHANGEGRAPHTO_LOGICALPROCESSORS
+            MENUITEM "NUMA nodes",                  ID_CHANGEGRAPHTO_NUMANODES
+        END
+        MENUITEM "Show kernel times",           ID_PERFORMANCE_SHOWKERNELTIMES
+        MENUITEM SEPARATOR
+        MENUITEM "Graph summary view",          ID_PERFORMANCE_GRAPHSUMMARYVIEW
+        POPUP "View"
+        BEGIN
+            MENUITEM "CPU",                         ID_VIEW_CPU
+            MENUITEM "Memory",                      ID_VIEW_MEMORY
+            POPUP "Disk"
+            BEGIN
+                MENUITEM "...",                         ID_DISK_NONE
+            END
+        END
+        MENUITEM "View network details",        ID_PERFORMANCE_VIEWNETWORKDETAILS
+        MENUITEM SEPARATOR
+        MENUITEM "Copy                              \tCtrl+C", ID_PERFORMANCE_COPY
+    END
+    POPUP "UsersList"
+    BEGIN
+        MENUITEM "Expand",                      ID_USERSLIST_EXPAND
+        MENUITEM "Disconnect",                  ID_USERSLIST_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "Manage User Accounts",        ID_USERSLIST_MANAGEUSERACCOUNTS
+    END
+    POPUP "DetailsList"
+    BEGIN
+        MENUITEM "End Process",                 ID_POP_DETAILSLIST_ENDPROCESS
+        MENUITEM "End Process Tree",            ID_POP_DETAILSLIST_ENDPROCESSTREE
+        MENUITEM SEPARATOR
+        POPUP "Set Priority"
+        BEGIN
+            MENUITEM "Realtime",                    ID_SETPRIORITY_REALTIME
+            MENUITEM "High",                        ID_SETPRIORITY_HIGH
+            MENUITEM "Above Normal",                ID_SETPRIORITY_ABOVENORMAL
+            MENUITEM "Normal",                      ID_SETPRIORITY_NORMAL
+            MENUITEM "Below Normal",                ID_SETPRIORITY_BELOWNORMAL
+            MENUITEM "Low",                         ID_SETPRIORITY_LOW
+        END
+        MENUITEM "Set Affinity...",             ID_DETAILSLIST_SETAFFINITY
+        MENUITEM SEPARATOR
+        POPUP "Create Dump File"
+        BEGIN
+            MENUITEM "Create Minidump ...",         ID_CREATEDUMPFILE_CREATEMINIDUMP
+            MENUITEM "Create Full Dump ...",        ID_CREATEDUMPFILE_CREATEFULLDUMP
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Open File Location",          ID_POP_DETAILSLIST_OPENFILELOCATION
+        MENUITEM "Search Online",               ID_DETAILSLIST_SEARCHONLINE
+        MENUITEM "Properties",                  ID_DETAILSLIST_PROPERTIES
+        MENUITEM "Go to Service(s)",            ID_DETAILSLIST_GOTOSERVICE
+    END
+    POPUP "ServicesList"
+    BEGIN
+        MENUITEM "Start",                       ID_SERVICESLIST_START
+        MENUITEM "Stop",                        ID_SERVICESLIST_STOP
+        MENUITEM "Restart",                     ID_SERVICESLIST_RESTART
+        MENUITEM SEPARATOR
+        MENUITEM "Open Services",               ID_SERVICESLIST_OPENSERVICES
+        MENUITEM "Search Online",               ID_SERVICESLIST_SEARCHONLINE
+        MENUITEM "Go to Details",               ID_SERVICESLIST_GOTODETAILS
+    END
+    POPUP "PerformanceType"
+    BEGIN
+        MENUITEM "Summary View",                ID_PERFORMANCETYPE_SUMMARYVIEW
+        MENUITEM "Hide Graphs",                 ID_PERFORMANCETYPE_HIDEGRAPHS
+        MENUITEM SEPARATOR
+        MENUITEM "Copy                       \tCtrl+C", ID_PERFORMANCETYPE_COPY
+    END
+    POPUP "ProcListTaskItem"
+    BEGIN
+        MENUITEM "Switch To",                   ID_PROCLISTTASKITEM_SWITCHTO
+        MENUITEM "Bring To Front",              ID_PROCLISTTASKITEM_BRINGTOFRONT
+        MENUITEM "Minimize",                    ID_PROCLISTTASKITEM_MINIMIZE
+        MENUITEM "Maximize",                    ID_PROCLISTTASKITEM_MAXIMIZE
+        MENUITEM "End Task",                    ID_PROCLISTTASKITEM_ENDTASK
+    END
+    POPUP "SimpleList"
+    BEGIN
+        MENUITEM "Switch To",                   ID_SIMPLELIST_SWITCHTO
+        MENUITEM "End Task",                    ID_SIMPLELIST_ENDTASK
+        MENUITEM SEPARATOR
+        MENUITEM "Run New Task",                ID_FILE_RUNNEWTASK
+        MENUITEM "Always On Top",               ID_OPTIONS_ALWAYSONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "Open File Location",          ID_SIMPLELIST_OPENFILELOCATION
+        MENUITEM "Search Online",               ID_SIMPLELIST_SEARCHONLINE
+        MENUITEM "Properties",                  ID_SIMPLELIST_PROPERTIES
+    END
+    POPUP "StartupList"
+    BEGIN
+        MENUITEM "Disable",                     ID_STARTUPLIST_DISABLE
+        MENUITEM SEPARATOR
+        MENUITEM "Open File Location",          ID_STARTUPLIST_OPENFILELOCATION
+        MENUITEM "Jump to Entry",               ID_STARTUPLIST_JUMPTOENTRY
+        MENUITEM "Search Online",               ID_STARTUPLIST_SEARCHONLINE
+        MENUITEM "Properties",                  ID_STARTUPLIST_PROPERTIES
+    END
+END
+
+IDR_POPMENU_COLUMN MENU 
+BEGIN
+    POPUP "processes"
+    BEGIN
+        MENUITEM "Type",                        ID_PROCESSES_TYPE
+        MENUITEM "Status",                      ID_PROCESSES_STATUS
+        MENUITEM "Publisher",                   ID_PROCESSES_PUBLISHER
+        MENUITEM "PID",                         ID_PROCESSES_PID
+        MENUITEM "Process name",                ID_PROCESSES_PROCESSNAME
+        MENUITEM "Command line",                ID_PROCESSES_COMMANDLINE
+        MENUITEM "CPU",                         ID_PROCESSES_CPU
+        MENUITEM "Memory",                      ID_PROCESSES_MEMORY
+        MENUITEM "Disk",                        ID_PROCESSES_DISK
+        MENUITEM "Network",                     ID_PROCESSES_NETWORK
+        MENUITEM SEPARATOR
+        POPUP "Resource values"
+        BEGIN
+            POPUP "Memory"
+            BEGIN
+                MENUITEM "Percents",                    ID_MEMORY_PERCENTS
+                MENUITEM "Values",                      ID_MEMORY_VALUES
+            END
+            POPUP "Disk"
+            BEGIN
+                MENUITEM "Percents",                    ID_DISK_PERCENTS
+                MENUITEM "Values",                      ID_DISK_VALUES
+            END
+            POPUP "Network"
+            BEGIN
+                MENUITEM "Percents",                    ID_NETWORK_PERCENTS
+                MENUITEM "Values",                      ID_NETWORK_VALUES
+            END
+        END
+    END
+    POPUP "Users"
+    BEGIN
+        MENUITEM "ID",                          ID_USERS_ID
+        MENUITEM "Session",                     ID_USERS_SESSION
+        MENUITEM "Client name",                 ID_USERS_CLIENTNAME
+        MENUITEM "Status",                      ID_USERS_STATUS
+        MENUITEM "CPU",                         ID_USERS_CPU
+        MENUITEM "Memory",                      ID_USERS_MEMORY
+        MENUITEM "Disk",                        ID_USERS_DISK
+        MENUITEM "Network",                     ID_USERS_NETWORK
+        MENUITEM SEPARATOR
+        POPUP "Resource values"
+        BEGIN
+            POPUP "Memory"
+            BEGIN
+                MENUITEM "Percents",                    ID_USERS_MEMORY_PERCENTS
+                MENUITEM "Values",                      ID_USERS_MEMORY_VALUES
+            END
+            POPUP "Disk"
+            BEGIN
+                MENUITEM "Percents",                    ID_USERS_DISK_PERCENTS
+                MENUITEM "Values",                      ID_USERS_DISK_VALUES
+            END
+            POPUP "Network"
+            BEGIN
+                MENUITEM "Percents",                    ID_USERS_NETWORK_PERCENTS
+                MENUITEM "Values",                      ID_USERS_NETWORK_VALUES
+            END
+        END
+    END
+    POPUP "details"
+    BEGIN
+        MENUITEM "Hide column",                 ID_DETAILS_HIDECOLUMN
+        MENUITEM "Select columns",              ID_DETAILS_SELECTCOLUMNS
+    END
+END
+
+IDR_MENU_SHELL MENU 
+BEGIN
+    POPUP "Notify"
+    BEGIN
+        MENUITEM "Restore",                     ID_NOTIFY_RESTORE
+        MENUITEM "Always on Top",               ID_OPTIONS_ALWAYSONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "Exit Task Manager",           ID_FILE_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PAGE_PERFORMANCE DIALOGEX 0, 0, 414, 278
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Open Resource Monitor",IDC_BTN_OPENRESMON,97,254,86,17
+END
+
+IDD_PAGE_SERVICES DIALOGEX 0, 0, 385, 200
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SERVICESLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,371,62
+    PUSHBUTTON      "Open Services",IDC_BTN_OPENSERVICES,41,173,96,19
+END
+
+IDD_PAGE_USERS DIALOGEX 0, 0, 385, 200
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_USERLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,371,62
+    PUSHBUTTON      "Disconnect",IDC_BTN_DISCONNECT,287,174,68,18
+END
+
+IDD_PAGE_PERFORMANCE_BOX DIALOGEX 0, 0, 414, 278
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Item",IDC_ITEMLABEL,14,11,76,17
+    LTEXT           "% Utilization over 60 seconds",IDC_TIP1,13,35,101,9
+    RTEXT           "100%",IDC_TIP2,217,35,25,9
+    RTEXT           "Item Name",IDC_ITEMNAME,71,18,186,11,SS_ENDELLIPSIS,WS_EX_RIGHT
+    CONTROL         "",IDC_LIST_PERFORMANCEITEM,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_TABSTOP,3,122,125,149
+    LTEXT           "60 seconds",IDC_TIP3,16,57,101,9
+    RTEXT           "0",IDC_TIP4,176,57,76,9
+    LTEXT           "-",IDC_TIP5,16,78,62,9
+    RTEXT           "100%",IDC_TIP6,193,78,76,9
+    LTEXT           "60 seconds",IDC_TIP7,14,105,76,9
+    RTEXT           "0",IDC_TIP8,207,105,76,9
+END
+
+IDD_PAGE_PROCESSES DIALOGEX 0, 0, 258, 104
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROCESSLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,6,7,245,62
+    PUSHBUTTON      "End task",IDC_BTN_ENDTASK,190,82,61,14,WS_DISABLED
+END
+
+IDD_SEL_COLUMNS DIALOGEX 0, 0, 248, 224
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select columns"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,134,203,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,191,203,50,14
+    LTEXT           "Select the columns  that will appear in table.",IDC_STATIC,7,7,169,19,SS_CENTERIMAGE
+    CONTROL         "",IDC_SELCOLUMN_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,29,234,165
+END
+
+IDD_PAGE_STARTUP DIALOGEX 0, 0, 381, 217
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STARTUP,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,367,128
+END
+
+IDD_AFFINITY DIALOGEX 0, 0, 222, 198
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Processor Affinity"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,165,177,50,14
+    DEFPUSHBUTTON   "OK",IDOK,109,177,50,14,WS_DISABLED
+    CONTROL         "",IDC_AFFINITYCPULIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,28,208,142
+    LTEXT           "Which processors are allowed to run ""$""?",IDC_STATIC_TITLE,7,9,208,11,SS_ENDELLIPSIS
+END
+
+IDD_MINI_PERFERMANCEBOX DIALOGEX 0, 0, 163, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROGRESS_CPU,"msctls_progress32",PBS_SMOOTH | WS_BORDER,9,24,144,6
+    LTEXT           "CPU",IDC_STATIC,9,10,46,9,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PROGRESS_MEMORY,"msctls_progress32",PBS_SMOOTH | WS_BORDER,9,56,144,6
+    CONTROL         "",IDC_PROGRESS_DISK,"msctls_progress32",PBS_SMOOTH | WS_BORDER,9,89,144,6
+    CONTROL         "",IDC_PROGRESS_NETWORK,"msctls_progress32",PBS_SMOOTH | WS_DISABLED | WS_BORDER,9,121,144,6
+    LTEXT           "Memory  ",IDC_STATIC,9,42,46,11,0,WS_EX_TRANSPARENT
+    LTEXT           "Disk",IDC_STATIC,9,75,46,11,0,WS_EX_TRANSPARENT
+    LTEXT           "Network",IDC_STATIC,9,108,46,11,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_CPU,107,10,46,9,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_MEM,107,42,46,9,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_DISK,107,75,46,9,0,WS_EX_TRANSPARENT
+    RTEXT           "0.00%",IDC_STATIC_NET,107,108,46,9,0,WS_EX_TRANSPARENT
+    CTEXT           "Performance",IDC_LINKBTNNAME,41,161,82,8,NOT WS_VISIBLE
+END
+
+IDD_HOTBOXVIEW DIALOGEX 0, 0, 174, 107
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+END
+
+IDD_PROCESS_PROPERTIES_IMAGE DIALOGEX 0, 0, 355, 273
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Image"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PATH,7,95,341,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_CMDLINE,7,126,341,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_DESCRIPTION,56,13,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_PUBLISHER,56,30,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    ICON            "",IDC_STATIC_ICON,7,13,21,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    EDITTEXT        IDC_EDIT_VER,56,50,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Version:",IDC_STATIC,7,50,32,9
+    LTEXT           "Path:",IDC_STATIC,7,83,32,8
+    LTEXT           "Command line:",IDC_STATIC,7,114,80,8
+    LTEXT           "Parent:",IDC_STATIC,7,174,32,8
+    EDITTEXT        IDC_EDIT_PARENT,56,174,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "User:",IDC_STATIC,7,191,32,8
+    EDITTEXT        IDC_EDIT_USER,56,191,292,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_PROCESS_PROPERTIES_PERFORMANCE DIALOGEX 0, 0, 337, 259
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Performance"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "CPU",IDC_STATIC,7,7,155,76,0,WS_EX_TRANSPARENT
+    LTEXT           "Priority",IDC_STATIC,15,21,39,8
+    LTEXT           "Kernel Time",IDC_STATIC,15,32,42,8
+    LTEXT           "User Time",IDC_STATIC,15,43,39,8
+    LTEXT           "Total Time",IDC_STATIC,15,54,39,8
+    LTEXT           "Cycles",IDC_STATIC,15,65,39,8
+    RTEXT           "-",IDC_PRIORITY,94,21,62,8
+    RTEXT           "-",IDC_KERNELTIME,94,32,62,8
+    RTEXT           "-",IDC_USERTIME,94,43,62,8
+    RTEXT           "-",IDC_TOTALTIME,94,54,62,8
+    RTEXT           "-",IDC_SYCLES,94,65,62,8
+    LTEXT           "Private Bytes",IDC_STATIC,15,101,44,8
+    LTEXT           "Peak Private Bytes",IDC_STATIC,15,112,65,8
+    LTEXT           "Virtual Size",IDC_STATIC,15,124,39,8
+    LTEXT           "Page Faults",IDC_STATIC,15,135,39,8
+    LTEXT           "Page Fault Delta",IDC_STATIC,15,146,62,8
+    GROUPBOX        "Virtual Memory",IDC_STATIC,7,87,155,76,0,WS_EX_TRANSPARENT
+    LTEXT           "Memory Priority",IDC_STATIC,15,180,57,8
+    LTEXT           "Working Set",IDC_STATIC,15,191,65,8
+    LTEXT           "WS Private",IDC_STATIC,29,202,39,8
+    LTEXT           "WS Shareable",IDC_STATIC,29,213,59,8
+    LTEXT           "WS Shared",IDC_STATIC,29,224,62,8
+    GROUPBOX        "Physical Memory",IDC_STATIC,7,167,155,85,0,WS_EX_TRANSPARENT
+    LTEXT           "Peak Working Set",IDC_STATIC,15,235,62,8
+    RTEXT           "-",IDC_PRIVATE_BYTES,94,101,62,8
+    RTEXT           "-",IDC_PEAKPRIVATE_BYTES2,98,112,58,8
+    RTEXT           "-",IDC_VIRTUALSIZE,98,124,58,8
+    RTEXT           "-",IDC_PF,98,135,58,8
+    RTEXT           "-",IDC_WS,94,191,62,8
+    RTEXT           "-",IDC_PEAKWS,94,235,62,8
+    RTEXT           "-",IDC_WS_PRIVATE,94,202,62,8
+    RTEXT           "-",IDC_WS_SHAREABLE,94,213,62,8
+    GROUPBOX        "I/O",IDC_STATIC,173,7,157,130,0,WS_EX_TRANSPARENT
+    LTEXT           "I/O Priority",IDC_STATIC,184,21,36,8
+    LTEXT           "Reads",IDC_STATIC,184,32,65,8
+    LTEXT           "Read Delta",IDC_STATIC,184,43,39,8
+    LTEXT           "Read Byte Delta",IDC_STATIC,184,54,53,8
+    LTEXT           "Writes",IDC_STATIC,184,65,34,8
+    LTEXT           "Write Delta",IDC_STATIC,184,76,40,8
+    LTEXT           "Write Bytes Delta",IDC_STATIC,184,87,60,9
+    LTEXT           "Other",IDC_STATIC,184,98,24,9
+    LTEXT           "Other Delta",IDC_STATIC,184,109,38,9
+    LTEXT           "Other Bytes Delta",IDC_STATIC,184,120,61,9
+    RTEXT           "-",IDC_READS,260,32,62,8
+    RTEXT           "-",IDC_WRITES,260,65,62,8
+    RTEXT           "-",IDC_OTHER,260,98,62,8
+END
+
+IDD_PAGE_DETAILS DIALOGEX 0, 0, 258, 104
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DETAILSLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,244,62
+    PUSHBUTTON      "End process",IDC_BTN_ENDPROCESS,190,82,61,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 329, 287
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DBC Task Manager"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,251,260,67,16,WS_GROUP
+    CONTROL         "<a>Home page</a>",IDC_HOME,"SysLink",WS_TABSTOP,69,232,42,13,WS_EX_TRANSPARENT
+    CONTROL         "<a>Questions && suggestions</a>",IDC_BLOG,"SysLink",WS_TABSTOP,128,232,79,13
+    CONTROL         "<a>Donate</a>",IDC_DONATE,"SysLink",WS_TABSTOP,232,232,29,13
+END
+
+IDD_DBCTASKMAN_DIALOG DIALOGEX 0, 0, 431, 296
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Windows Task Manager"
+MENU IDR_MAINMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,324,275,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,374,275,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_PAGETAB,"SysTabControl32",WS_TABSTOP,7,7,417,25
+    CONTROL         "    ",IDC_BTN_FEWERORMORE,"Button",BS_OWNERDRAW | WS_TABSTOP,7,272,73,17
+    CONTROL         "",IDC_SIMPLETASK,"SysListView32",LVS_REPORT | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,52,417,169
+END
+
+IDD_PROCESS_PROPERTIES_MODULES DIALOGEX 0, 0, 329, 241
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Modules"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_MOUDLE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_GROUP | WS_TABSTOP,6,7,316,146
+END
+
+IDD_PROCESS_PROPERTIES_HANDLES DIALOGEX 0, 0, 340, 269
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Handles"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_HANDLES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,325,255
+    DEFPUSHBUTTON   "OK",IDOK,306,254,26,8,NOT WS_VISIBLE
+END
+
+IDD_PROCESS_PROPERTIES_THREADS DIALOGEX 0, 0, 340, 269
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Threads"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_THREADS,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,25,325,157
+    DEFPUSHBUTTON   "OK",IDOK,306,254,26,8,NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PAGE_PERFORMANCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 407
+        VERTGUIDE, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 271
+        HORZGUIDE, 31
+        HORZGUIDE, 44
+    END
+
+    IDD_PAGE_SERVICES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 378
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+        HORZGUIDE, 32
+    END
+
+    IDD_PAGE_USERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 378
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+        HORZGUIDE, 32
+    END
+
+    IDD_PAGE_PERFORMANCE_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 407
+        VERTGUIDE, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 271
+        HORZGUIDE, 31
+        HORZGUIDE, 44
+    END
+
+    IDD_PAGE_PROCESSES, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+        HORZGUIDE, 32
+    END
+
+    IDD_SEL_COLUMNS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 217
+    END
+
+    IDD_PAGE_STARTUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 374
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+        HORZGUIDE, 129
+    END
+
+    IDD_AFFINITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 191
+    END
+
+    IDD_MINI_PERFERMANCEBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 9
+        RIGHTMARGIN, 153
+        VERTGUIDE, 55
+        VERTGUIDE, 107
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+        HORZGUIDE, 38
+        HORZGUIDE, 71
+        HORZGUIDE, 104
+    END
+
+    IDD_HOTBOXVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_PROCESS_PROPERTIES_IMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        VERTGUIDE, 56
+        TOPMARGIN, 13
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_PROCESS_PROPERTIES_PERFORMANCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        VERTGUIDE, 156
+        VERTGUIDE, 162
+        VERTGUIDE, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+    END
+
+    IDD_PAGE_DETAILS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+        HORZGUIDE, 32
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+    END
+
+    IDD_DBCTASKMAN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 424
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 289
+    END
+
+    IDD_PROCESS_PROPERTIES_MODULES, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_PROCESS_PROPERTIES_HANDLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 332
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 262
+    END
+
+    IDD_PROCESS_PROPERTIES_THREADS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 332
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 262
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    STR_COLUMN_DETAILS      "Name;Image type;PID;Status;User name;Session ID;CPU;CPU time;Working set (memory);Peak working set (memory);Working set delta (memory);Memory (private working set);Commit size;Paged pool;NP pool;Page faults;PF Delta;Base priority;Handles;Threads;User objects;GDI objects;I/O reads;I/O writes;I/O other;I/O read bytes;I/O write bytes;I/O other bytes;Image paths name;Command line;UAC virtualization;Description;Data Execution Prevention;"
+    STR_SETPRIORITY_MAINTIP "Do you want to change  the priority of '%s'?"
+    STR_SETPRIORITY_CONTENT "Changing the priority of certain processes could cause system instability."
+    STR_SETPRIORITY_BTN     "Change priority;Cancel;"
+    STR_SETPRIORITY_ERRORTIP 
+                            "Unable to Change Priority;The operation could not be completed.\nAccess is denied."
+    STR_COLUMN_PROP_MODULES "Name;Description;Publisher;Image paths name;"
+    STR_COLUMN_PROP_HANDLES "Type;Name;"
+    STR_ENDMULTPROC_MAINTIP "All of these processes will be terminated\n%s"
+    STR_ENDMULTPROC_BTN     "End Processes;Cancel;"
+    STR_ENDSYSPROC_MAINTIP  "Do you want to end the system process '%s'?"
+    STR_ENDSYSPROC_CONTENT  "Ending this process will shut down the operating system immediately. You will lose all unsaved data. Are you sure you want to continue?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "About Task manager"
+    STR_COLUMN_PROCESS      "Name;Type;Status;Publisher;PID;Process Name;Command Line;CPU;Memory;Disk;Network;"
+END
+
+STRINGTABLE 
+BEGIN
+    STR_COLUMN_USERS        "User;ID;Session;Client Name;Status;CPU;Memory;Disk;Network;"
+    IDS_STRING_WAVETIME_SLOW "4 Minutes"
+    IDS_STRING_WAVETIME_NORMAL "60 Seconds"
+    IDS_STRING_WAVETIME_FAST "30 Seconds"
+    IDS_STRING_FEWERDETAILS "Fewer Details"
+    IDS_STRING_MOREDETAILS  "More Details"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING_POPMENU_EXP  "Expand"
+    IDS_STRING_POPMENU_COLL "Collapse"
+    STR_ENDPROC_CONTENT     "If an open program is associated with this process,it will close and you will lose any unsaved data.If you end a system process,it might result in an unstable system.  Are you sure you want to continue?"
+    STR_ENDPROC_MAINTIP     "Do you want to end '%s'?"
+    STR_ENDPROC_BTN         "End Process;Cancel;"
+    IDS_STRING_SHOWGRAPH    "Show Graphs"
+    IDS_STRING_HIDEGRAPH    "Hide Graphs"
+    STR_COLUMN_STARTUP      "Name;Status;Publisher;Startup type;Command line;"
+    STR_ENDPROCTREE_CONTENT "If open programs or processes are associated with this process tree,they will close and you will lose any unsaved data.If you end a system process,it might result in an unstable system.  Are you sure you want to continue?"
+    STR_ENDPROCTREE_BTN     "End process tree;Cancel;"
+    STR_ENDPROCTREE_MAINTIP "Do you want to end the process tree of '%s'?"
+    IDS_FONTNAME            "Tahoma"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PITEM_CPU           "CPU"
+    IDS_PITEM_MEM           "Memory"
+    IDS_PITEM_DISK          "Disk"
+    IDS_PITEM_NET           "Ethernet"
+    IDS_PITEM_WIRELESS      "Wireless"
+    IDS_PITEM_GPU           "GPU"
+    STR_TABITEMS            "Processes;Performance;Users;Details;Services;Startup;"
+    STR_COLUMN_SERVER       "Name;PID;Description;Status;Sratr type;Group;"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_FONTNAME        "Tahoma"
+    IDS_MAIN_CAPTION        "Task Manager"
+    IDS_STR_GROUP_APP       "Apps"
+    IDS_STR_GROUP_BKG       "Background processes"
+    IDS_STR_GROUP_WIN       "Windows processes"
+    IDS_STR_CPUINFO_0       "Utilization"
+    IDS_STR_CPUINFO_1       "Speed"
+    IDS_STR_CPUINFO_2       "Processes"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_CPUINFO_3       "Threads"
+    IDS_STR_CPUINFO_4       "Handles"
+    IDS_STR_CPUINFO_5       "Up time"
+    IDS_STR_CPUINFO_6       "Maximum speed:\nSockets:\nCores:\nLogical processors:\nVirtualization:\nL1 cache:\nL2 cache:\nL3 cache:"
+    IDS_STR_TIP1_CPU_TOTAL  "% Utilization"
+    IDS_STR_TIP1_CPU_LOGICAL "Utilization over %s %%"
+    IDS_STR_TIP1_CPU_NUMA   " Logical processors"
+    IDS_STR_MEMINFO_0       "In use"
+    IDS_STR_MEMINFO_1       "Available"
+    IDS_STR_MEMINFO_2       "Committed"
+    IDS_STR_MEMINFO_3       "Cached"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_MEMINFO_4       "Paged pool"
+    IDS_STR_MEMINFO_5       "Non-paged pool"
+    IDS_STR_MEMINFO_6       "Speed:\nSlots used:\nForm factor:\nHardware reserved:"
+    IDS_STR_TIP3_MEMORY     "Memory usage"
+    IDS_STR_TIP5_MEMORY     "Memory composition"
+    IDS_STR_DISKINFO_0      "Active time"
+    IDS_STR_DISKINFO_1      "Average response time"
+    IDS_STR_DISKINFO_2      "Read speed"
+    IDS_STR_DISKINFO_3      "Write speed"
+    IDS_STR_DISKINFO_6      "Capacity:\nFormatted:\nSystem disk:\nPage file:"
+    IDS_STR_TIP5_DISK       "Disk transfer rate"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STR_NETWORKINFO_0   "Send"
+    IDS_STR_NETWORKINFO_2   "Receive"
+    IDS_STR_NETWORKINFO_6   "Adapter name:\nConnection type:\nIPv4 address:\nIPv6 address:"
+    IDS_STR_TIP3_NETWORK    " Throughput"
+    IDS_STR_PROPERTIESDLG_CAPTION "Properties"
+END
+
+STRINGTABLE 
+BEGIN
+    STR_SVR_STATUS          "Stopped;Starting;Stopping;Running;SERVICE_CONTINUE_PENDING;SERVICE_PAUSE_PENDING;Paused;Unkown State;"
+    STR_SVR_STARTTYPE       "Boot;System;Automatic;Manual;Disabled;Unkown;"
+END
+
+STRINGTABLE 
+BEGIN
+    STR_ENDSYSPROC_BTN      "Shut down;Cancel;"
+    STR_ENDSYSPROC_OTHER    "Abandon unsaved data and shut down."
+    STR_ENDMULTPROC_CONTENT "Are you sure you want to continue?"
+    STR_CHARCODE            "utf-8"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\DBCTaskman.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

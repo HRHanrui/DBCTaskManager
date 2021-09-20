@@ -1,0 +1,304 @@
+// WaveList.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "DBCTaskman.h"
+#include "WaveList.h"
+
+
+// CWaveList
+
+IMPLEMENT_DYNAMIC(CWaveList, CListCtrl)
+
+CWaveList::CWaveList()
+: nCol(0)
+, nLine(0)
+{
+
+}
+
+CWaveList::~CWaveList()
+{
+}
+
+
+BEGIN_MESSAGE_MAP(CWaveList, CListCtrl)
+	//ON_WM_PAINT()
+	ON_WM_MEASUREITEM_REFLECT() 
+END_MESSAGE_MAP()
+
+
+
+// CWaveList message handlers
+
+
+
+void CWaveList::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
+{
+
+	
+	CDC *pDC;
+	//不可以用  GetDC 否则启用半透明选区时 显示有问题 ！！！！ 
+	pDC = CDC::FromHandle(lpDrawItemStruct->hDC);  
+
+	CRect rcItem;
+	CRect headerRect;
+
+	CDC MemDC;//内存ID表  
+	CBitmap MemMap;
+	CBitmap *pOldBm;
+	
+
+	rcItem.SetRect(lpDrawItemStruct->rcItem.left,lpDrawItemStruct->rcItem.top,lpDrawItemStruct->rcItem.right,lpDrawItemStruct->rcItem.bottom);
+
+	MemDC.CreateCompatibleDC(pDC);  
+	MemMap.CreateCompatibleBitmap(pDC,rcItem.Width(),rcItem.Height());
+	pOldBm=MemDC.SelectObject(&MemMap);
+
+	MemDC.SelectObject(this->GetFont());
+ 
+  	MemDC.FillSolidRect(0,0,rcItem.Width(),rcItem.Height(),RGB(255,255,255));  
+
+//MemDC.FillSolidRect  (0,0,rcItem.Width(),rcItem.Height(),RGB(rand()%255,rand()%255,rand()%255));
+
+  //	DefWindowProc(WM_PAINT,(WPARAM)MemDC.m_hDC,(LPARAM)0); 
+ 
+
+
+
+
+
+	
+
+
+	COLORREF SelbkColor = ::GetSysColor(COLOR_HIGHLIGHT);
+	COLORREF SeltextColor = ::GetSysColor(COLOR_HIGHLIGHTTEXT);
+
+
+	CRect rcIcon;
+
+	LV_ITEM lvi;
+	//LV_COLUMN  lvc;
+
+//	WCHAR lpBuffer[MAX_PATH*2];
+	lvi.mask = LVIF_TEXT | LVIF_PARAM ;
+	lvi.iItem = lpDrawItemStruct->itemID ; 
+	lvi.iSubItem = 0;
+	//lvi.pszText = lpBuffer ;
+//	lvi.cchTextMax = sizeof(lpBuffer);
+
+ 
+
+	CRect  rcSubItem ;
+
+
+
+	Graphics graphics(MemDC.m_hDC );
+ 
+	graphics.SetSmoothingMode(SmoothingModeHighQuality  );
+
+	PointF  PArray[120+1+2];
+
+
+
+	//	ColCount =1;
+		
+	
+		GetSubItemRect(lpDrawItemStruct->itemID, 0, LVIR_LABEL, rcSubItem);
+
+
+
+		//画横线
+
+
+
+		CPen Pen(0,1,RGB(217,234,244));
+
+		MemDC.SelectObject(&Pen);
+
+
+		int StepX=rcItem.Width()/6;
+		int StepY=rcItem.Height()/10;
+
+
+		int PosX=StepX;
+		int PosY=StepY;
+		for(int  i=0;i<9;i++)
+		{
+			MemDC.MoveTo(rcItem.left+4,PosY);
+			MemDC.LineTo(rcSubItem.Width()*nCol+1,PosY);
+			PosY+=StepY;
+
+		}
+
+
+
+
+
+
+
+		for(int i=0;i<nCol;i++)
+		{
+
+
+			
+
+
+			//rcSubItem.top = rcSubItem.Height()*lpDrawItemStruct->itemID;
+			rcSubItem.OffsetRect(0,-rcSubItem.top); // 由于 MemDC 只有一行的高度所以 每次rcSubItem 纵向都要从零开始
+
+			rcSubItem.DeflateRect( 2, 2);
+
+
+
+			_DrawWave(&graphics,PArray,rcSubItem);
+
+
+			//MemDC.FillSolidRect(rcSubItem,RGB(rand()%255,rand()%255,rand()%255));
+			MemDC.Draw3dRect(rcSubItem,RGB(17,125,187),RGB(17,125,187));
+			rcSubItem.InflateRect( 1, 1);
+			MemDC.Draw3dRect(rcSubItem,RGB(255,255,255),RGB(255,255,255));
+			rcSubItem.InflateRect( 1, 1);
+			MemDC.Draw3dRect(rcSubItem,RGB(255,255,255),RGB(255,255,255));
+			rcSubItem.OffsetRect(rcSubItem.Width(),0);
+
+
+
+		}
+
+		 
+
+
+
+	
+   // MemDC.FillSolidRect();
+
+
+
+
+	  pDC->BitBlt(rcItem.left,rcItem.Height()*lpDrawItemStruct->itemID,rcItem.Width(),rcItem.Height(),&MemDC, 0, 0, SRCCOPY);
+		//pDC->DeleteDC();
+
+
+ 
+
+	 // pDC->DeleteDC();
+	  graphics.ReleaseHDC(MemDC);
+   	MemDC.DeleteDC();
+	MemMap.DeleteObject();
+
+
+
+
+}
+
+void CWaveList::OnPaint()
+{
+	CPaintDC dc(this); // device context for painting
+	// TODO: Add your message handler code here
+	// Do not call CListCtrl::OnPaint() for painting messages
+	CRect rc;
+	this->GetClientRect(rc);
+	
+
+ 
+
+	CDC MemDC;//内存ID表  
+	CBitmap MemMap;
+	CBitmap *pOldBm;
+
+	MemDC.CreateCompatibleDC(&dc);  
+	MemMap.CreateCompatibleBitmap(&dc,rc.Width(),rc.Height());
+	pOldBm=MemDC.SelectObject(&MemMap);
+	MemDC.FillSolidRect(&rc,RGB(255,2,255));  
+
+
+
+	dc.BitBlt(0,0,rc.Width(),  rc.Height(),&MemDC,0, 0,SRCCOPY);  
+
+	//这一句是调用默认的OnPaint(),把图形画在内存DC表上  
+	
+	//DefWindowProc(WM_PAINT,(WPARAM)MemDC.m_hDC,(LPARAM)0);     
+
+
+ 
+
+
+
+	 
+ 
+
+
+	//graphics.ReleaseHDC(MemDC);
+
+
+	MemDC.SelectObject(pOldBm);
+
+   	MemDC.DeleteDC();
+	MemMap.DeleteObject();
+ 
+
+}
+
+void CWaveList::MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	CRect rc;
+	this->GetClientRect(rc);
+	
+	lpMeasureItemStruct->itemHeight   = rc.Height()/nLine ;
+
+}
+void CWaveList::_DrawWave(Gdiplus::Graphics  * pGraph,  Gdiplus::PointF * pArray,CRect rc)
+{
+
+
+	int  Seg=60; //标准速度 60  高 120  低 30  
+
+	for(int i=1;i<=Seg;i++)
+	{
+		//Num[i] =rc.Height()/100* (::GetTickCount()%100);
+		pArray[i].X=rc.left+(float)rc.Width()/Seg*i;
+		pArray[i].Y=rc.bottom-(float)rc.Height()/100* (::rand()%60);
+
+
+
+	}
+
+	//PArray[60].X=rc.right;
+
+
+	pArray[0].X=(float)rc.left;
+	pArray[0].Y=(float)rc.bottom;
+
+	pArray[Seg].X=(float)rc.right;
+	//pArray[Seg].Y=(float)rc.bottom;
+
+
+	pArray[Seg+1].X=(float)rc.right;
+	pArray[Seg+1].Y=(float)rc.bottom;
+
+	pArray[Seg+2].X=0;
+	pArray[Seg+2].Y=(float)rc.bottom;
+
+
+
+
+	
+ 
+
+	GraphicsPath Path;
+	Path.AddLines(pArray,Seg+3);	
+	
+	
+	pGraph->FillPath(&SolidBrush(Color(20,17,125,187)),&Path);  //Color(100,0,222,0)
+
+	pGraph->DrawLines(&Gdiplus::Pen(Color(255,17,125,187),1),pArray,Seg+1);  //Color(255,0,180,0)
+
+
+
+
+
+
+}
+
